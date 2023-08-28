@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Image, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { AntDesign, Octicons } from '@expo/vector-icons';
 import Experience from '../components/Experience';
+import Cards from '../components/Card';
 
 
 function HomeScreen() {
@@ -83,6 +84,7 @@ function HomeScreen() {
         ))}
       </View>
       <Experience/>
+      <Cards/>
     </View>
     </ScrollView>
   
