@@ -1,20 +1,36 @@
 import React, { useState } from 'react';
-import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Image, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { AntDesign, Octicons } from '@expo/vector-icons';
+import Experience from '../components/Experience';
 
 
 function HomeScreen() {
+  const imageUrl = 'https://res.cloudinary.com/duotxzytv/image/upload/v1692904349/Art/pexels-tiana-2956376_ojlvy4.jpg';
   const slides = [
     {
-      url: require('../assets/img/slider1.jpg'),
+        url: 'https://res.cloudinary.com/duotxzytv/image/upload/v1692902621/Art/pexels-steve-johnson-1843716_cngdmu.jpg',
+      },
+    {
+      url: 'https://res.cloudinary.com/duotxzytv/image/upload/v1692902596/Art/pexels-anni-roenkae-3109807_2_jeumay.jpg',
     },
     {
-      url: require('../assets/img/slider2.jpg'),
+      url: 'https://res.cloudinary.com/duotxzytv/image/upload/v1692902621/Art/pexels-steve-johnson-1843716_cngdmu.jpg',
+    },
+
+    {
+      url: 'https://res.cloudinary.com/duotxzytv/image/upload/v1692902621/Art/pexels-steve-johnson-1843716_cngdmu.jpg',
     },
     {
-      url: require('../assets/img/slider3.jpg'),
+      url: 'https://res.cloudinary.com/duotxzytv/image/upload/v1692902651/Art/pexels-steve-johnson-1585323_buftdm.jpg',
     },
+    {
+        url: 'https://res.cloudinary.com/duotxzytv/image/upload/v1692903659/Art/pexels-steve-johnson-1266808_mrbyat.jpg',
+      },
+    {
+        url: 'https://res.cloudinary.com/duotxzytv/image/upload/v1692902684/Art/pexels-steve-johnson-2007088_ue2huj.jpg',
+      },
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -34,9 +50,10 @@ function HomeScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.wrapper}>
+  <View style={styles.container}>
       <View style={styles.sliderContainer}>
-        <Image source={slides[currentIndex].url} style={styles.slideImage} />
+        <Image  source={{ uri: slides[currentIndex].url }} style={styles.slideImage} />
         <TouchableOpacity
           style={[styles.arrowButton, styles.leftArrow]}
           onPress={prevSlide}
@@ -65,21 +82,29 @@ function HomeScreen() {
           </TouchableOpacity>
         ))}
       </View>
+      <Experience/>
     </View>
+    </ScrollView>
+  
   );
 }
 
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  wrapper:{
+    flex: 1,
+  },
   container: {
     flex: 1,
-    marginTop:50,
+    marginTop:40,
     alignItems: 'center',
+    flexDirection: 'column',
+    height: '100%',
   },
   sliderContainer: {
     width: '90%',
-    height: '60%',
+    height: 400,
     borderRadius: 20,
     overflow: 'hidden',
   },
