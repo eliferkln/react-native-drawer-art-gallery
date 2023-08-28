@@ -6,7 +6,6 @@ import Cards from '../components/Card';
 
 
 function HomeScreen() {
-  const imageUrl = 'https://res.cloudinary.com/duotxzytv/image/upload/v1692904349/Art/pexels-tiana-2956376_ojlvy4.jpg';
   const slides = [
     {
         url: 'https://res.cloudinary.com/duotxzytv/image/upload/v1692902621/Art/pexels-steve-johnson-1843716_cngdmu.jpg',

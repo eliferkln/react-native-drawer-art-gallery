@@ -42,7 +42,7 @@ const DrawerContent = ({ navigation }) => {
 					</View>
 				</ScrollView>
 				<View style={styles.footer}>
-					<Text style={styles.description}>Menu Tutorial</Text>
+					<Text style={styles.description}>Art Gallery</Text>
 					<Text style={styles.version}>v1.2</Text>
 				</View>
 			</View>
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
 		flex: 1,
     paddingLeft: 20,
     paddingRight:20,
-		paddingTop: 20,
+		marginTop:30,
 		paddingBottom: 450,
 	},
 	link: {
@@ -143,6 +143,6 @@ const styles = StyleSheet.create({
 		flex: 1, 
 		marginLeft: 20,
 		fontSize: 16,
-    color:'#AEC3AE',
+    color:'#F86F03',
 	}
 })
